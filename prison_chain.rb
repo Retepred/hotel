@@ -10,6 +10,10 @@ class Prison_chain
     prisoners[prisoner.name] = prisoner
   end
 
+  def add_cell(cell)
+    cells[cell.name] = cell
+  end
+
   def list_all_prisoners
     if prisoners.empty?
       "We currently have no criminals in any of our prisons. Watch out for the restless dead!"
@@ -18,6 +22,10 @@ class Prison_chain
         puts name.join("\n")
       end
     end
+  end
+
+  def set_prisoner_free(prisoner_name)
+    prisoner = prisoners.delete(prisoner_name)
   end
 
   def add_prison(prison)
@@ -32,10 +40,6 @@ class Prison_chain
         puts name.join("\n")
       end
     end
-  end
-
-  def set_prisoner_free(prisoner_name)
-    prisoner = prisoners.delete(prisoner_name)
   end
 
 end

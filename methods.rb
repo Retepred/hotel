@@ -85,20 +85,20 @@ def set_prisoner_free(prison_chain)
 end
 
 def torture_prisoner_for_science(prison_chain)
+  puts prison_chain.list_all_prisoners
   puts "which prisoner would you like to send to the Beagle chamber? "
   prisoner_name = gets.chomp
   puts "
   Waking the beagles...
   (⌐■_■)--︻╦╤─ - - - (╥﹏╥)
-  "
+  \n"
   sleep 4
   puts "tossing the prisoner in.."
   sleep 2
-  puts "pulling prisoner #{prisoner_name} out"
+  puts "pulling prisoner #{prisoner_name} out\n\n"
 end
 
 def book_prisoner_into_cell(prisons)
-  puts
   print "which prison is the convict going to stay in? "
   prison_name = gets.chomp
   print "which Prisoner is going to jail? "

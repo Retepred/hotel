@@ -9,6 +9,9 @@ require_relative 'methods'
 
 prison_chain=Prison_chain.new name: "Peter's Private Prisons"
 
+prisons=Prison
+cells=Cell
+
 prison_chain.add_prisoner Prisoner.new name:'Nevster'
 prison_chain.add_prisoner Prisoner.new name: 'Michael'
 prison_chain.add_prisoner Prisoner.new name: 'Graeme'
@@ -18,7 +21,7 @@ prison_chain.add_prison Prison.new name: 'Happiness Farm'
 prison_chain.add_prison Prison.new name: 'Joyville'
 prison_chain.add_prison Prison.new name: 'Smile Town'
 
-#prisons.add_cell Cell.new cell_num: '1'
+prison_chain.add_cell Cell.new cell_num: '1'
 #prisons.add_cell Cell.new cell_num: '2'
 #prisons.add_cell Cell.new cell_num: '3'
 #prisons.add_cell Cell.new cell_num: '4'
@@ -28,26 +31,6 @@ prison_chain.add_prison Prison.new name: 'Smile Town'
 #prisons.add_cell Cell.new cell_num: '8'
 #prisons.add_cell Cell.new cell_num: '9'
 #prisons.add_cell Cell.new cell_num: '10'
-#prisons.add_cell Cell.new cell_num: '11'
-#prisons.add_cell Cell.new cell_num: '12'
-#prisons.add_cell Cell.new cell_num: '13'
-#prisons.add_cell Cell.new cell_num: '14'
-#prisons.add_cell Cell.new cell_num: '15'
-#prisons.add_cell Cell.new cell_num: '16'
-#prisons.add_cell Cell.new cell_num: '17'
-#prisons.add_cell Cell.new cell_num: '18'
-#prisons.add_cell Cell.new cell_num: '19'
-#prisons.add_cell Cell.new cell_num: '20'
-#prisons.add_cell Cell.new cell_num: '21'
-#prisons.add_cell Cell.new cell_num: '22'
-#prisons.add_cell Cell.new cell_num: '23'
-#prisons.add_cell Cell.new cell_num: '24'
-#prisons.add_cell Cell.new cell_num: '25'
-#prisons.add_cell Cell.new cell_num: '26'
-#prisons.add_cell Cell.new cell_num: '27'
-#prisons.add_cell Cell.new cell_num: '28'
-#prisons.add_cell Cell.new cell_num: '29'
-#prisons.add_cell Cell.new cell_num: '30'
 
 response = menu
 
@@ -57,12 +40,12 @@ while response != 0
    list_all_prisons(prison_chain)
 when 2
    add_prisoner(prison_chain)
-# when 3
-#   list_all_prisoners_in_cells(prison_chain)
+ when 3
+   list_all_cells(prisons)
  when 4
    list_all_prisoners(prison_chain)
- when 5
-   book_prisoner_into_cell(prisons)
+ #when 5
+ #  book_prisoner_into_cell(prisons)
  when 6
    set_prisoner_free(prison_chain)
  when 7

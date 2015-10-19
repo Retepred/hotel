@@ -48,7 +48,7 @@ def add_prisoner(prisonchain)
   print "what is the name of the new Prisoner? "
   name = gets.chomp
   prisoner = Prisoner.new(name: name)
-  prison_chain.add_prisoner(prisoner)
+  prisonchain.add_prisoner(prisoner)
 end
 
 def list_all_prisoners(prisonchain)

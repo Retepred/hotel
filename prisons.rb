@@ -5,4 +5,9 @@ class Prison
     @cell = {}
     @prisoners = {}
   end
+
+#  def add_cell(cell)
+#    cells[cell.celltitle] = cell
+#  end
+
 end

@@ -44,48 +44,48 @@ def menu
   gets.to_i
 end
 
-def add_prisoner(prison_chain)
+def add_prisoner(prisonchain)
   print "what is the name of the new Prisoner? "
   name = gets.chomp
   prisoner = Prisoner.new(name: name)
   prison_chain.add_prisoner(prisoner)
 end
 
-def list_all_prisoners(prison_chain)
-  puts prison_chain.list_all_prisoners
+def list_all_prisoners(prisonchain)
+  puts prisonchain.list_all_prisoners
 end
 
-def add_prison(prison_chain)
+def add_prison(prisonchain)
   print "what is the name of the new Prison? "
   name = gets.chomp
   prison = Prison.new(name: name)
-  prison_chain.add_prison(prison)
+  prisonchain.add_prison(prison)
 end
 
 def add_cell(prisons)
   print "what is the name of the new Cell? "
-  name = gets.chomp
+  celltitle = gets.chomp
   cell = Cell.new(cell_num: name)
   prisons.add_cell(prison)
 end
 
-def list_all_prisons(prison_chain)
-  puts prison_chain.list_all_prisons
+def list_all_prisons(prisonchain)
+  puts prisonchain.list_all_prisons
 end
 
-def set_prisoner_free(prison_chain)
+def set_prisoner_free(prisonchain)
   puts
-  puts prison_chain.list_all_prisoners
+  puts prisonchain.list_all_prisoners
   print "which Prisoner is to be sent to Australia?: "
   prisoner_name = gets.chomp
-  prisoner = prison_chain.prisoners[prisoner_name]
+  prisoner = prisonchain.prisoners[prisoner_name]
   puts
 
-  prison_chain.set_prisoner_free(prisoner_name)
+  prisonchain.set_prisoner_free(prisoner_name)
 end
 
-def torture_prisoner_for_science(prison_chain)
-  puts prison_chain.list_all_prisoners
+def torture_prisoner_for_science(prisonchain)
+  puts prisonchain.list_all_prisoners
   puts "which prisoner would you like to send to the Beagle chamber? "
   prisoner_name = gets.chomp
   puts "

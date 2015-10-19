@@ -1,4 +1,4 @@
-class Prison_chain
+class Prisonchain
   attr_reader :name, :prisons, :prisoners
   def initialize(options={})
     @name = options[:name]
@@ -8,10 +8,6 @@ class Prison_chain
 
   def add_prisoner(prisoner)
     prisoners[prisoner.name] = prisoner
-  end
-
-  def add_cell(cell)
-    cells[cell.name] = cell
   end
 
   def list_all_prisoners
